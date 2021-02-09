@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
-mkdir congenica_vcf
+mkdir -p ./amplivar_output/vcf/refheader_vcf/
 for vcf in *dict.vcf
     do sed -i "s/#CHROM/##REFERENCE=hg19\n#CHROM/" "$vcf"
 done
-mv ./*dict.vcf ./congenica_vcf/
+mv ./*dict.vcf ./amplivar_output/vcf/refheader_vcf/
